@@ -1,9 +1,17 @@
-import Image from 'next/image'
+"use client"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Home</h1>
-    </main>
+    <motion.main
+     className=' h-screen flex flex-col justify-center items-center'
+     initial={{ opacity: 0, scale: 1 }}
+     animate={{ opacity: 1, scale: 1 }}
+     transition={{ duration: 1 }}>
+      <h1>SPECIALIZED IN ELIGIBILITY AUTOMATION</h1>
+      <h2>Building custom solutions using <div className='underline'>Oracle's Intelligent Advisor</div> platform.</h2>
+      <button>SEND MESSAGE</button>
+      <button>LEARN MORE</button>
+    </motion.main>
   )
 }
